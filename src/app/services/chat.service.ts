@@ -6,6 +6,9 @@ import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/databa
 export class ChatService {
     
     chats: FirebaseListObservable<any[]>;
+    usuario:any = {
+            nombre: "David"
+    }
 
     constructor(private db: AngularFireDatabase) {
         //this.chats = db.list('/chats');
