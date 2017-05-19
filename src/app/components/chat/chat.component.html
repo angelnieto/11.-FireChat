@@ -2,9 +2,9 @@
 <hr>
 
 <article id="app-mensajes" class="app-mensajes">
-	<section [ngClass]="{'text-right' : service.usuario.nombre == chat.nombre}" *ngFor="let chat of service.chats | async">
-		<span class="badge badge-pill" [ngClass]="{'badge-info': service.usuario.nombre == chat.nombre,
-						  'badge-warning': service.usuario.nombre != chat.nombre}">
+	<section [ngClass]="{'text-right' : service.usuario.user.uid == chat.uid}" *ngFor="let chat of service.chats | async">
+		<span class="badge badge-pill" [ngClass]="{'badge-info': service.usuario.user.uid == chat.uid,
+						  'badge-warning': service.usuario.user.uid != chat.uid}">
 			{{ chat.nombre }}
 		</span>
 		<p>{{ chat.mensaje }}</p>
